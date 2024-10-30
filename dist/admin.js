@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){$("#logo").on("click",function(){var e=wp.media({frame:"post",state:"insert",multiple:!1});e.on("insert",function(){var t=e.state().get("selection").first().toJSON();document.getElementById("logo_input").value=t.url,$("#image-container").html('<img style="width: 250px;height: 250px;object-fit:cover;" src="'+t.url+'" />')}),e.open()})});
